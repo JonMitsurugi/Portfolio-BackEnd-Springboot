@@ -13,32 +13,33 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
-public class Experiencia {
+public class Proyecto {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @NotNull
-    private String nombreExp;
+    private String nombrePro;
     @NotNull
-    private int fechaInicioExp;
-    private int fechaFinExp;
-    @NotNull
-    private String rolExp;
+    private String tipoPro;
+    private String urlPro;
     @NotNull
     @Column(name = "descripcion", length = 1000, nullable = false) 
-    private String descripcionExp;
+    private String descripcionPro;
 
     
-    public Experiencia() {
+    public Proyecto() {
     }
 
-    public Experiencia(String nombreExp, int fechaInicioExp, int fechaFinExp, String rolExp, String descripcionExp) {
-        this.nombreExp = nombreExp;
-        this.fechaInicioExp = fechaInicioExp;
-        this.fechaFinExp = fechaFinExp;
-        this.rolExp = rolExp;
-        this.descripcionExp = descripcionExp;
+    public Proyecto(String nombrePro, String tipoPro, String urlPro, String descripcionPro) {
+        this.nombrePro = nombrePro;
+        this.tipoPro = tipoPro;
+        this.urlPro = urlPro;
+        this.descripcionPro = descripcionPro;
     }
+
+   
+
+    
 
 }
