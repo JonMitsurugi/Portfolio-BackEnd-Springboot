@@ -48,13 +48,17 @@ public class Controller {
     public Persona editarPersona(@PathVariable Long id, 
                                @RequestParam (name = "nombre") String nuevoNombre,
                                @RequestParam(name = "apellido") String nuevoApellido,
-                               @RequestParam(name = "img") String nuevoImg) {
+                               @RequestParam(name = "descripcion") String nuevoDescripcion, 
+                               @RequestParam(name = "imgFondo") String nuevoImgFondo,
+                               @RequestParam(name = "imgPerfil") String nuevoImgPerfil) {
         
         Persona persona = iPersonaService.buscarPersona(id);
         
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
-        persona.setImg(nuevoImg);
+        persona.setDescripcion(nuevoDescripcion);
+        persona.setImgFondo(nuevoImgFondo);
+        persona.setImgPerfil(nuevoImgPerfil);
         
         iPersonaService.crearPersona(persona);
         return persona;
@@ -62,7 +66,7 @@ public class Controller {
     
     @GetMapping ("/traer")
     public Persona traerPersona() {
-        Persona persona = iPersonaService.buscarPersona((long) 6);
+        Persona persona = iPersonaService.buscarPersona((long)1);
         return persona;
     }
     
