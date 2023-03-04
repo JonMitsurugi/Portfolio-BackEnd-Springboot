@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("estudio")
-@CrossOrigin(origins = "*")
+@RequestMapping("/estudio")
+@CrossOrigin(origins = "https://porfolio-frontend-jma.web.app")
 public class EstudioController {
     
     @Autowired
