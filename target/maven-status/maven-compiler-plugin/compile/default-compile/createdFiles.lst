@@ -7,7 +7,6 @@ com\portfolio\jma\security\service\RolService.class
 com\portfolio\jma\security\dto\JwtDto.class
 com\portfolio\jma\security\jwt\JwtEntryPoint.class
 com\portfolio\jma\JmaApplication.class
-com\portfolio\jma\JmaApplicationConfig.class
 com\portfolio\jma\security\entity\Rol.class
 com\portfolio\jma\security\service\UsuarioService.class
 com\portfolio\jma\model\Estudio.class
